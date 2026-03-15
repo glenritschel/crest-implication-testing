@@ -1,0 +1,160 @@
+{
+  "ACA_positive => Calcinosis": {
+    "claim": "Anticentromere antibody positivity implies calcinosis",
+    "source": "Steen et al. 1984; Valenzuela et al. 2016 (SCTC); Mahmood et al. 2016",
+    "rationale": "ACA is the serological hallmark of limited cutaneous SSc and is the autoantibody most consistently associated with calcinosis across multiple cohorts. Mahmood et al. (2016) identified ACA as an independent predictor in a multivariate model (OR=2.1, p<0.001).",
+    "n_a1": 258,
+    "n_a0": 542,
+    "n_violations": 166,
+    "violation_rate": 0.643,
+    "pac_bound": 0.693,
+    "chi_squared": {
+      "chi2": 16.204,
+      "p_value": 5.7e-05,
+      "dof": 1,
+      "phi": 0.142
+    },
+    "causal": {
+      "has_edge": true,
+      "directed_A_to_B": false,
+      "note": "PC algorithm, Fisher-Z independence test"
+    },
+    "invariance_sex": {
+      "invariant": false,
+      "groups": {
+        "sex=0": {
+          "n_a1": 43,
+          "n_violations": 34,
+          "violation_rate": 0.791,
+          "pac_bound": 0.8862
+        },
+        "sex=1": {
+          "n_a1": 215,
+          "n_violations": 132,
+          "violation_rate": 0.614,
+          "pac_bound": 0.6695
+        }
+      }
+    },
+    "rosenbaum_gamma": 2.257,
+    "verdict": "TRENDING"
+  },
+  "DigitalUlcers => Calcinosis": {
+    "claim": "Digital ulcers imply calcinosis",
+    "source": "Valenzuela et al. 2016 (SCTC, OR=3.9); Chung et al. 2015",
+    "rationale": "Digital ulcers and calcinosis share a common pathophysiology of chronic ischaemia and tissue hypoxia. The SCTC study (n=5218) identified digital ulcers as the strongest clinical predictor of calcinosis (OR=3.9, 95% CI: 2.7-5.5, p<0.0001) in multivariate analysis.",
+    "n_a1": 255,
+    "n_a0": 545,
+    "n_violations": 140,
+    "violation_rate": 0.549,
+    "pac_bound": 0.6016,
+    "chi_squared": {
+      "chi2": 66.164,
+      "p_value": 0.0,
+      "dof": 1,
+      "phi": 0.288
+    },
+    "causal": {
+      "has_edge": true,
+      "directed_A_to_B": false,
+      "note": "PC algorithm, Fisher-Z independence test"
+    },
+    "invariance_sex": {
+      "invariant": false,
+      "groups": {
+        "sex=0": {
+          "n_a1": 37,
+          "n_violations": 22,
+          "violation_rate": 0.595,
+          "pac_bound": 0.7309
+        },
+        "sex=1": {
+          "n_a1": 218,
+          "n_violations": 118,
+          "violation_rate": 0.541,
+          "pac_bound": 0.5984
+        }
+      }
+    },
+    "rosenbaum_gamma": 1.51,
+    "verdict": "REJECTED"
+  },
+  "lcSSc => Calcinosis": {
+    "claim": "Limited cutaneous SSc subtype implies calcinosis",
+    "source": "Herrick & Gallas 2016; SCTC 2016; Akesson & Wollheim 1989",
+    "rationale": "Calcinosis is predominantly a feature of lcSSc (formerly CREST syndrome) rather than dcSSc. The CREST acronym itself was developed around lcSSc patients, and calcinosis prevalence in lcSSc (~30%) substantially exceeds that in dcSSc (~18%).",
+    "n_a1": 482,
+    "n_a0": 318,
+    "n_violations": 333,
+    "violation_rate": 0.691,
+    "pac_bound": 0.7256,
+    "chi_squared": {
+      "chi2": 12.277,
+      "p_value": 0.000458,
+      "dof": 1,
+      "phi": 0.124
+    },
+    "causal": {
+      "has_edge": true,
+      "directed_A_to_B": false,
+      "note": "PC algorithm, Fisher-Z independence test"
+    },
+    "invariance_sex": {
+      "invariant": false,
+      "groups": {
+        "sex=0": {
+          "n_a1": 71,
+          "n_violations": 53,
+          "violation_rate": 0.746,
+          "pac_bound": 0.8293
+        },
+        "sex=1": {
+          "n_a1": 411,
+          "n_violations": 280,
+          "violation_rate": 0.681,
+          "pac_bound": 0.7192
+        }
+      }
+    },
+    "rosenbaum_gamma": 2.644,
+    "verdict": "TRENDING"
+  },
+  "Osteoporosis => Calcinosis": {
+    "claim": "Osteoporosis implies calcinosis",
+    "source": "Valenzuela et al. 2016 (SCTC, OR=4.2); novel finding",
+    "rationale": "The association between osteoporosis and calcinosis was a novel finding of the SCTC study (OR=4.2, 95% CI: 2.3-7.9, p<0.0001). This may reflect shared pathophysiology involving dysregulated bone and calcium metabolism, with calcium mobilised from bone being deposited in soft tissues.",
+    "n_a1": 42,
+    "n_a0": 758,
+    "n_violations": 17,
+    "violation_rate": 0.405,
+    "pac_bound": 0.5433,
+    "chi_squared": {
+      "chi2": 23.314,
+      "p_value": 1e-06,
+      "dof": 1,
+      "phi": 0.171
+    },
+    "causal": {
+      "has_edge": true,
+      "directed_A_to_B": false,
+      "note": "PC algorithm, Fisher-Z independence test"
+    },
+    "invariance_sex": {
+      "invariant": false,
+      "groups": {
+        "sex=0": {
+          "n": 4,
+          "skipped": true
+        },
+        "sex=1": {
+          "n_a1": 38,
+          "n_violations": 16,
+          "violation_rate": 0.421,
+          "pac_bound": 0.5669
+        }
+      }
+    },
+    "rosenbaum_gamma": 1.189,
+    "verdict": "TRENDING"
+  }
+}
