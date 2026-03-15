@@ -1,0 +1,150 @@
+{
+  "dcSSc => Sclerodactyly": {
+    "claim": "Diffuse cutaneous SSc implies sclerodactyly",
+    "source": "ACR/EULAR 2013 criteria; Khanna et al. 2017; EUSTAR database",
+    "rationale": "Sclerodactyly (skin thickening of fingers) is a defining feature of dcSSc, scoring 4 points in the ACR/EULAR 2013 classification criteria. dcSSc by definition involves skin thickening proximal to elbows/knees, and sclerodactyly is near-universal (~95%) in this subtype. The mRSS trajectory shows rapid progression in dcSSc within 12-18 months of onset.",
+    "outcome": "sclerodactyly",
+    "n_a1": 307,
+    "n_violations": 9,
+    "violation_rate": 0.029,
+    "pac_bound": 0.0506,
+    "chi_squared": {
+      "chi2": 67.443,
+      "p_value": 0.0,
+      "phi": 0.29
+    },
+    "causal": {
+      "has_edge": true
+    },
+    "invariance_sex": {
+      "invariant": false,
+      "groups": {
+        "sex=0": {
+          "n_a1": 45,
+          "n_violations": 2,
+          "violation_rate": 0.044,
+          "pac_bound": 0.1334
+        },
+        "sex=1": {
+          "n_a1": 262,
+          "n_violations": 7,
+          "violation_rate": 0.027,
+          "pac_bound": 0.0496
+        }
+      }
+    },
+    "rosenbaum_gamma": 0.053,
+    "verdict": "REJECTED"
+  },
+  "Scl70 => Sclerodactyly": {
+    "claim": "Anti-Scl70 antibody implies sclerodactyly",
+    "source": "Medsger 2003; EUSTAR database; Denton & Khanna 2017",
+    "rationale": "Anti-topoisomerase I (Scl70) is the autoantibody of dcSSc, strongly predicting progressive skin fibrosis. Scl70-positive patients have the highest rates of sclerodactyly and the highest mRSS scores. Antitopoisomerase was identified as an independent factor for onset of skin fibrosis (OR 3.08) in the EUSTAR database.",
+    "outcome": "sclerodactyly",
+    "n_a1": 133,
+    "n_violations": 0,
+    "violation_rate": null,
+    "pac_bound": 0.0223,
+    "chi_squared": {
+      "chi2": 30.957,
+      "p_value": 0.0,
+      "phi": 0.197
+    },
+    "causal": {
+      "has_edge": true
+    },
+    "invariance_sex": {
+      "invariant": true,
+      "groups": {
+        "sex=0": {
+          "n_a1": 17,
+          "n_violations": 0,
+          "violation_rate": 0.0,
+          "pac_bound": 0.1616
+        },
+        "sex=1": {
+          "n_a1": 116,
+          "n_violations": 0,
+          "violation_rate": 0.0,
+          "pac_bound": 0.0255
+        }
+      }
+    },
+    "rosenbaum_gamma": 0.023,
+    "verdict": "REJECTED"
+  },
+  "HighmRSS => Sclerodactyly": {
+    "claim": "High modified Rodnan Skin Score (>14) implies sclerodactyly",
+    "source": "Khanna et al. J Scleroderma Relat Disord 2017; Clements et al. 1995",
+    "rationale": "The modified Rodnan Skin Score (mRSS) includes 17 body sites including fingers. An mRSS >14 indicates severe widespread skin involvement and by definition requires significant finger/hand involvement (sclerodactyly). Severe skin involvement (mRSS >20) is an independent risk factor for poor outcomes.",
+    "outcome": "sclerodactyly",
+    "n_a1": 221,
+    "n_violations": 8,
+    "violation_rate": 0.036,
+    "pac_bound": 0.0644,
+    "chi_squared": {
+      "chi2": 36.952,
+      "p_value": 0.0,
+      "phi": 0.215
+    },
+    "causal": {
+      "has_edge": true
+    },
+    "invariance_sex": {
+      "invariant": false,
+      "groups": {
+        "sex=0": {
+          "n_a1": 35,
+          "n_violations": 1,
+          "violation_rate": 0.029,
+          "pac_bound": 0.1285
+        },
+        "sex=1": {
+          "n_a1": 186,
+          "n_violations": 7,
+          "violation_rate": 0.038,
+          "pac_bound": 0.0695
+        }
+      }
+    },
+    "rosenbaum_gamma": 0.069,
+    "verdict": "REJECTED"
+  },
+  "Sclerodactyly => DigitalPitting": {
+    "claim": "Sclerodactyly implies digital pitting scars",
+    "source": "EUSTAR database; ACR/EULAR 2013 criteria (3 points for pitting scars)",
+    "rationale": "Digital pitting scars are the direct consequence of chronic ischaemia in fingers with sclerodactyly. The ACR/EULAR 2013 classification criteria award 3 points for fingertip pitting scars (only slightly fewer than sclerodactyly's 4 points), indicating their strong co-occurrence. Sclerodactyly creates the vascular compromise that leads to pitting scars over time.",
+    "outcome": "digital_pitting",
+    "n_a1": 665,
+    "n_violations": 236,
+    "violation_rate": 0.355,
+    "pac_bound": 0.3866,
+    "chi_squared": {
+      "chi2": 52.574,
+      "p_value": 0.0,
+      "phi": 0.256
+    },
+    "causal": {
+      "has_edge": true
+    },
+    "invariance_sex": {
+      "invariant": false,
+      "groups": {
+        "sex=0": {
+          "n_a1": 86,
+          "n_violations": 24,
+          "violation_rate": 0.279,
+          "pac_bound": 0.3695
+        },
+        "sex=1": {
+          "n_a1": 579,
+          "n_violations": 212,
+          "violation_rate": 0.366,
+          "pac_bound": 0.4004
+        }
+      }
+    },
+    "rosenbaum_gamma": 0.63,
+    "verdict": "REJECTED"
+  }
+}

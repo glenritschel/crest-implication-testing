@@ -1,0 +1,166 @@
+{
+  "AbnormalCap => Raynaud": {
+    "claim": "Abnormal nailfold capillaroscopy implies Raynaud phenomenon",
+    "source": "Cutolo et al. 2016; VEDOSS 2021; Smith et al. 2020",
+    "rationale": "Abnormal nailfold capillaroscopy (SSc pattern: giant capillaries, haemorrhages, avascular areas) is the definitive microvascular marker of SSc-related Raynaud phenomenon. The 2013 ACR/EULAR SSc classification criteria include abnormal capillaroscopy as a major criterion. The presence of SSc-pattern capillaroscopy in a patient with RP is considered diagnostic of secondary (SSc-associated) RP.",
+    "outcome": "raynaud",
+    "n_a1": 624,
+    "n_a0": 176,
+    "n_violations": 11,
+    "violation_rate": 0.018,
+    "pac_bound": 0.029,
+    "chi_squared": {
+      "chi2": 5.024,
+      "p_value": 0.025004,
+      "dof": 1,
+      "phi": 0.079
+    },
+    "causal": {
+      "has_edge": true,
+      "directed_A_to_B": false,
+      "note": "PC algorithm, Fisher-Z"
+    },
+    "invariance_sex": {
+      "invariant": false,
+      "groups": {
+        "sex=0": {
+          "n_a1": 77,
+          "n_violations": 1,
+          "violation_rate": 0.013,
+          "pac_bound": 0.0601
+        },
+        "sex=1": {
+          "n_a1": 547,
+          "n_violations": 10,
+          "violation_rate": 0.018,
+          "pac_bound": 0.0308
+        }
+      }
+    },
+    "rosenbaum_gamma": 0.03,
+    "verdict": "MODERATE"
+  },
+  "LateCapillaroscopy => SevereRaynaud": {
+    "claim": "Late nailfold capillaroscopy pattern implies severe Raynaud phenomenon",
+    "source": "Smith et al. 2013 (J Rheumatol); Cutolo et al. 2016",
+    "rationale": "The late capillaroscopy pattern (extensive avascular areas, aberrant neoangiogenesis) is associated with the most severe vascular disease in SSc. Smith et al. (2013) demonstrated that late capillaroscopy pattern independently predicts new severe organ involvement. Late pattern implies severe Raynaud because the avascular dropout seen in capillaroscopy directly reflects the tissue ischaemia driving digital ulceration.",
+    "outcome": "severe_rp",
+    "n_a1": 310,
+    "n_a0": 490,
+    "n_violations": 92,
+    "violation_rate": 0.297,
+    "pac_bound": 0.3424,
+    "chi_squared": {
+      "chi2": 17.856,
+      "p_value": 2.4e-05,
+      "dof": 1,
+      "phi": 0.149
+    },
+    "causal": {
+      "has_edge": false,
+      "directed_A_to_B": false,
+      "note": "PC algorithm, Fisher-Z"
+    },
+    "invariance_sex": {
+      "invariant": false,
+      "groups": {
+        "sex=0": {
+          "n_a1": 38,
+          "n_violations": 10,
+          "violation_rate": 0.263,
+          "pac_bound": 0.4054
+        },
+        "sex=1": {
+          "n_a1": 272,
+          "n_violations": 82,
+          "violation_rate": 0.301,
+          "pac_bound": 0.3506
+        }
+      }
+    },
+    "rosenbaum_gamma": 0.521,
+    "verdict": "WEAK"
+  },
+  "SSc_autoantibody => Raynaud": {
+    "claim": "SSc-specific autoantibody (ACA or anti-Scl70) implies Raynaud phenomenon",
+    "source": "VEDOSS 2021 (ACA HR=3.94); Steen & Medsger 2007",
+    "rationale": "SSc-specific autoantibodies (ACA and anti-topoisomerase I/Scl-70) are highly specific for SSc and are present in ~55% of SSc patients. Their presence in a patient with RP strongly predicts SSc diagnosis and therefore SSc-associated RP. In the VEDOSS cohort, ACA increased the hazard of SSc progression 3.94-fold beyond ANA alone.",
+    "outcome": "raynaud",
+    "n_a1": 382,
+    "n_a0": 418,
+    "n_violations": 2,
+    "violation_rate": 0.005,
+    "pac_bound": 0.0164,
+    "chi_squared": {
+      "chi2": 10.216,
+      "p_value": 0.001392,
+      "dof": 1,
+      "phi": 0.113
+    },
+    "causal": {
+      "has_edge": true,
+      "directed_A_to_B": false,
+      "note": "PC algorithm, Fisher-Z"
+    },
+    "invariance_sex": {
+      "invariant": false,
+      "groups": {
+        "sex=0": {
+          "n_a1": 37,
+          "n_violations": 1,
+          "violation_rate": 0.027,
+          "pac_bound": 0.1219
+        },
+        "sex=1": {
+          "n_a1": 345,
+          "n_violations": 1,
+          "violation_rate": 0.003,
+          "pac_bound": 0.0137
+        }
+      }
+    },
+    "rosenbaum_gamma": 0.017,
+    "verdict": "MODERATE"
+  },
+  "DigitalUlcers => SevereRaynaud": {
+    "claim": "Digital ulcers imply severe Raynaud phenomenon",
+    "source": "Hughes & Herrick (Nat Rev Rheumatol 2020); Matucci-Cerinic 2016",
+    "rationale": "Digital ulcers are the most common severe complication of SSc-related RP, representing the endpoint of repeated ischaemic attacks. The presence of digital ulcers implies that Raynaud attacks are severe enough to cause tissue necrosis. This is recognised in clinical guidelines as an indication for escalated vasodilator therapy (prostanoids, PDE5 inhibitors, endothelin receptor antagonists).",
+    "outcome": "severe_rp",
+    "n_a1": 237,
+    "n_a0": 563,
+    "n_violations": 52,
+    "violation_rate": 0.219,
+    "pac_bound": 0.2683,
+    "chi_squared": {
+      "chi2": 40.183,
+      "p_value": 0.0,
+      "dof": 1,
+      "phi": 0.224
+    },
+    "causal": {
+      "has_edge": true,
+      "directed_A_to_B": true,
+      "note": "PC algorithm, Fisher-Z"
+    },
+    "invariance_sex": {
+      "invariant": false,
+      "groups": {
+        "sex=0": {
+          "n_a1": 24,
+          "n_violations": 5,
+          "violation_rate": 0.208,
+          "pac_bound": 0.3891
+        },
+        "sex=1": {
+          "n_a1": 213,
+          "n_violations": 47,
+          "violation_rate": 0.221,
+          "pac_bound": 0.2725
+        }
+      }
+    },
+    "rosenbaum_gamma": 0.367,
+    "verdict": "REJECTED"
+  }
+}

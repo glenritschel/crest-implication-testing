@@ -1,0 +1,150 @@
+{
+  "dcSSc => EsophDysmotility": {
+    "claim": "Diffuse cutaneous SSc implies esophageal dysmotility",
+    "source": "Ebert et al. 2012 (95.4% dcSSc vs 58.5% lcSSc); Roman et al. 2011",
+    "rationale": "dcSSc is the dominant predictor of esophageal dysmotility (ED). Ebert et al. (2012) showed 95.4% of dcSSc patients had abnormal esophageal transit scintigraphy vs 58.5% of lcSSc patients. Roman et al. (2011) using high-resolution manometry found diffuse skin involvement, Scl70, and absence of ACA as independent predictors of ED.",
+    "outcome": "esoph_dysmotility",
+    "n_a1": 307,
+    "n_violations": 35,
+    "violation_rate": 0.114,
+    "pac_bound": 0.1483,
+    "chi_squared": {
+      "chi2": 73.56,
+      "p_value": 0.0,
+      "phi": 0.303
+    },
+    "causal": {
+      "has_edge": true
+    },
+    "invariance_sex": {
+      "invariant": false,
+      "groups": {
+        "sex=0": {
+          "n_a1": 45,
+          "n_violations": 8,
+          "violation_rate": 0.178,
+          "pac_bound": 0.298
+        },
+        "sex=1": {
+          "n_a1": 262,
+          "n_violations": 27,
+          "violation_rate": 0.103,
+          "pac_bound": 0.1393
+        }
+      }
+    },
+    "rosenbaum_gamma": 0.174,
+    "verdict": "REJECTED"
+  },
+  "Scl70 => EsophDysmotility": {
+    "claim": "Anti-Scl70 antibody implies esophageal dysmotility",
+    "source": "Roman et al. 2011 (HRM); Medsger 2003",
+    "rationale": "Anti-topoisomerase I (Scl70) antibody is the serological marker of dcSSc and independently predicts esophageal dysmotility in high-resolution manometry studies (Roman et al. 2011). Its association with dcSSc phenotype means Scl70-positive patients have the most severe esophageal smooth muscle fibrosis.",
+    "outcome": "esoph_dysmotility",
+    "n_a1": 133,
+    "n_violations": 18,
+    "violation_rate": 0.135,
+    "pac_bound": 0.1941,
+    "chi_squared": {
+      "chi2": 17.642,
+      "p_value": 2.7e-05,
+      "phi": 0.149
+    },
+    "causal": {
+      "has_edge": true
+    },
+    "invariance_sex": {
+      "invariant": false,
+      "groups": {
+        "sex=0": {
+          "n_a1": 17,
+          "n_violations": 3,
+          "violation_rate": 0.176,
+          "pac_bound": 0.3956
+        },
+        "sex=1": {
+          "n_a1": 116,
+          "n_violations": 15,
+          "violation_rate": 0.129,
+          "pac_bound": 0.1921
+        }
+      }
+    },
+    "rosenbaum_gamma": 0.241,
+    "verdict": "MODERATE"
+  },
+  "Dysphagia => EsophDysmotility": {
+    "claim": "Dysphagia implies esophageal dysmotility",
+    "source": "Ling et al. PMC 2021; Alcala-Gonzalez et al. 2024",
+    "rationale": "Dysphagia is the cardinal symptom of esophageal involvement in SSc, directly reflecting impaired peristalsis. The GERD study by Alcala-Gonzalez (2024) confirmed dysphagia as a predictor of PPI-refractory outcomes, and Ling et al. (2021) identified it as the main clinical manifestation of esophageal dysmotility in SSc.",
+    "outcome": "esoph_dysmotility",
+    "n_a1": 270,
+    "n_violations": 45,
+    "violation_rate": 0.167,
+    "pac_bound": 0.2085,
+    "chi_squared": {
+      "chi2": 29.211,
+      "p_value": 0.0,
+      "phi": 0.191
+    },
+    "causal": {
+      "has_edge": true
+    },
+    "invariance_sex": {
+      "invariant": false,
+      "groups": {
+        "sex=0": {
+          "n_a1": 38,
+          "n_violations": 9,
+          "violation_rate": 0.237,
+          "pac_bound": 0.3769
+        },
+        "sex=1": {
+          "n_a1": 232,
+          "n_violations": 36,
+          "violation_rate": 0.155,
+          "pac_bound": 0.1997
+        }
+      }
+    },
+    "rosenbaum_gamma": 0.263,
+    "verdict": "REJECTED"
+  },
+  "EsophDysmotility => PPIrefractory": {
+    "claim": "Esophageal dysmotility implies PPI-refractory GERD symptoms",
+    "source": "Alcala-Gonzalez et al. Rheumatology 2024; Ling et al. 2021",
+    "rationale": "PPIs suppress acid but cannot restore esophageal motility. Patients with SSc-related dysmotility have impaired clearance of refluxate regardless of acid suppression, leading to PPI-refractory symptoms. Alcala-Gonzalez (2024) demonstrated GI dysmotility as the only independent predictor of PPI-refractory esophagitis in SSc.",
+    "outcome": "ppi_refractory",
+    "n_a1": 568,
+    "n_violations": 210,
+    "violation_rate": 0.37,
+    "pac_bound": 0.4044,
+    "chi_squared": {
+      "chi2": 126.169,
+      "p_value": 0.0,
+      "phi": 0.397
+    },
+    "causal": {
+      "has_edge": null
+    },
+    "invariance_sex": {
+      "invariant": false,
+      "groups": {
+        "sex=0": {
+          "n_a1": 65,
+          "n_violations": 23,
+          "violation_rate": 0.354,
+          "pac_bound": 0.4627
+        },
+        "sex=1": {
+          "n_a1": 503,
+          "n_violations": 187,
+          "violation_rate": 0.372,
+          "pac_bound": 0.4087
+        }
+      }
+    },
+    "rosenbaum_gamma": 0.679,
+    "verdict": "REJECTED"
+  }
+}

@@ -1,0 +1,150 @@
+{
+  "lcSSc => Telangiectasia": {
+    "claim": "Limited cutaneous SSc implies telangiectasia",
+    "source": "Zhang et al. 2015 (EUSTAR China); Clements & Furst 2003",
+    "rationale": "Telangiectasias are classically associated with lcSSc (the former CREST syndrome). The Zhang EUSTAR study (2015) showed telangiectasia in Chinese SSc patients was predominantly a feature of longer disease duration and vascular disease. lcSSc patients have a higher prevalence (~50%) than dcSSc (~35%), consistent with the original CREST description.",
+    "outcome": "telangiectasia",
+    "n_a1": 493,
+    "n_violations": 185,
+    "violation_rate": 0.375,
+    "pac_bound": 0.4126,
+    "chi_squared": {
+      "chi2": 11.254,
+      "p_value": 0.000794,
+      "phi": 0.119
+    },
+    "causal": {
+      "has_edge": true
+    },
+    "invariance_sex": {
+      "invariant": false,
+      "groups": {
+        "sex=0": {
+          "n_a1": 52,
+          "n_violations": 21,
+          "violation_rate": 0.404,
+          "pac_bound": 0.5273
+        },
+        "sex=1": {
+          "n_a1": 441,
+          "n_violations": 164,
+          "violation_rate": 0.372,
+          "pac_bound": 0.4114
+        }
+      }
+    },
+    "rosenbaum_gamma": 0.702,
+    "verdict": "TRENDING"
+  },
+  "ACA => Telangiectasia": {
+    "claim": "Anticentromere antibody implies telangiectasia",
+    "source": "DETECT algorithm (Coghlan 2014); Hoeper et al. 2013",
+    "rationale": "ACA is a component of the DETECT screening algorithm for SSc-PAH, alongside telangiectasia, reflecting their strong co-occurrence. ACA-positive patients have the classic lcSSc phenotype with prominent telangiectasias. The DETECT algorithm uses ACA and telangiectasia as complementary vascular markers.",
+    "outcome": "telangiectasia",
+    "n_a1": 262,
+    "n_violations": 80,
+    "violation_rate": 0.305,
+    "pac_bound": 0.3556,
+    "chi_squared": {
+      "chi2": 21.208,
+      "p_value": 4e-06,
+      "phi": 0.163
+    },
+    "causal": {
+      "has_edge": true
+    },
+    "invariance_sex": {
+      "invariant": false,
+      "groups": {
+        "sex=0": {
+          "n_a1": 22,
+          "n_violations": 7,
+          "violation_rate": 0.318,
+          "pac_bound": 0.5155
+        },
+        "sex=1": {
+          "n_a1": 240,
+          "n_violations": 73,
+          "violation_rate": 0.304,
+          "pac_bound": 0.3567
+        }
+      }
+    },
+    "rosenbaum_gamma": 0.552,
+    "verdict": "TRENDING"
+  },
+  "LongDuration => Telangiectasia": {
+    "claim": "Disease duration >10 years implies telangiectasia",
+    "source": "Zhang et al. 2015 (EUSTAR): p<0.05 for disease duration); Herrick 2012",
+    "rationale": "The Zhang EUSTAR study specifically identified longer disease duration from both RP onset and first non-RP manifestation as significantly associated with telangiectasia (p<0.05). This reflects the progressive vascular remodelling that produces telangiectasias over time as a late manifestation of microvascular disease.",
+    "outcome": "telangiectasia",
+    "n_a1": 293,
+    "n_violations": 108,
+    "violation_rate": 0.369,
+    "pac_bound": 0.4175,
+    "chi_squared": {
+      "chi2": 5.162,
+      "p_value": 0.02309,
+      "phi": 0.08
+    },
+    "causal": {
+      "has_edge": false
+    },
+    "invariance_sex": {
+      "invariant": false,
+      "groups": {
+        "sex=0": {
+          "n_a1": 26,
+          "n_violations": 7,
+          "violation_rate": 0.269,
+          "pac_bound": 0.4468
+        },
+        "sex=1": {
+          "n_a1": 267,
+          "n_violations": 101,
+          "violation_rate": 0.378,
+          "pac_bound": 0.4298
+        }
+      }
+    },
+    "rosenbaum_gamma": 0.717,
+    "verdict": "TRENDING"
+  },
+  "Telangiectasia => PAH": {
+    "claim": "Telangiectasia implies pulmonary arterial hypertension",
+    "source": "DETECT algorithm (Coghlan 2014); Humbert et al. 2019; Morrisroe 2017",
+    "rationale": "Telangiectasia is a formal component of the DETECT PAH screening algorithm for SSc, reflecting its well-validated association with SSc-PAH (OR ~2.0). Humbert et al. confirmed telangiectasia as a clinical predictor of SSc-PAH. The underlying mechanism is shared pathophysiology of aberrant vasodilation and vascular remodeling affecting both skin and pulmonary vasculature.",
+    "outcome": "pah",
+    "n_a1": 462,
+    "n_violations": 398,
+    "violation_rate": 0.861,
+    "pac_bound": 0.8872,
+    "chi_squared": {
+      "chi2": 0.972,
+      "p_value": 0.324093,
+      "phi": 0.035
+    },
+    "causal": {
+      "has_edge": false
+    },
+    "invariance_sex": {
+      "invariant": false,
+      "groups": {
+        "sex=0": {
+          "n_a1": 52,
+          "n_violations": 43,
+          "violation_rate": 0.827,
+          "pac_bound": 0.9066
+        },
+        "sex=1": {
+          "n_a1": 410,
+          "n_violations": 355,
+          "violation_rate": 0.866,
+          "pac_bound": 0.8927
+        }
+      }
+    },
+    "rosenbaum_gamma": 7.866,
+    "verdict": "REJECTED"
+  }
+}
