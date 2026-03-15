@@ -88,7 +88,7 @@ def generate_ssc_cohort(n, seed=42):
       - OR(calcinosis|osteoporosis)   ≈ 4.2 (SCTC 2016)
       - OR(calcinosis|lcSSc)          ≈ 1.5 (SCTC 2016, Herrick 2016)
     """
-    rng = np.random.default_rng(seed)
+    rng = np.random.RandomState(seed)
 
     # ── Demographics ──────────────────────────────────────────────────────────
     sex = rng.binomial(1, 0.85, n)           # 1=female, 0=male (85% female)
@@ -140,7 +140,7 @@ def generate_ssc_cohort(n, seed=42):
     # Base log-odds calibrated so overall prevalence ≈ 25%
     # Each predictor contributes log-OR from published literature
     log_odds = (
-        -1.80                           # intercept (baseline ~14%)
+        -2.70                           # intercept calibrated to ~25% prevalence
         + 1.36 * digital_ulcers         # OR ≈ 3.9 (SCTC 2016)
         + 0.74 * aca_pos                # OR ≈ 2.1 (SCTC 2016)
         + 1.44 * osteoporosis           # OR ≈ 4.2 (SCTC 2016)
